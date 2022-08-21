@@ -39,3 +39,10 @@ BEGIN
       select * from bank_detail where education = v1 and job = v2;
 END&&
 call sel_edujob1('tertiary','services') 
+///VIEWS///    ///VIEWS///     ///VIEWS/// ///VIEWS///
+///VIEWS/// ///VIEWS/// : A sorter version of data , a subset of data is called view. i.e. virtual table  for simplicity
+create view bank_view as select age, job, marital, education from bank_detail;
+select avg(marital) from bank_view where job = 'admin.'
+
+
+
